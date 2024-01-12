@@ -1,0 +1,81 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened="true">
+        <div class="logo-container">
+            <img src="assets\NStarx_Logo.png" alt="Logo">
+            <!-- <span class="logo-text">My Logo</span> -->
+        </div>
+        <div class="settingIcon">
+            <button mat-icon-button (click)="toggleSettings()" class="settings-icon">
+                <mat-icon>settings</mat-icon>
+            </button>
+        </div>
+        <!-- <span>{{ activeComponentName || 'Sidebar Example' }}</span> -->
+        <div class="settings-menu" *ngIf="showSettings">
+            <!-- <button mat-button (click)="viewProfile()">View Profile</button> -->
+            <button mat-button (click)="viewProfile()">
+                <fa-icon [icon]="faViewProfile" style="margin-right: 10px;"></fa-icon> View Profile
+            </button> <br>
+            <button mat-button (click)="logout()"> <fa-icon [icon]="faLogOut"
+                    style="margin-right: 10px;"></fa-icon>Logout</button>
+        </div>
+        <div class="profile-container">
+            <div class="avatar">
+                ADMIN SITE
+            </div>
+            <div class="profile-info">
+                <span>{{ profileId }}</span>
+                <span>{{ profileName }}</span>
+            </div>
+        </div>
+        <mat-nav-list>
+            <button mat-menu-item routerLink="Dashboard">
+                <fa-icon [icon]="faDashBoard"></fa-icon> Dashboard
+            </button>
+            <button mat-menu-item routerLink="Employees">
+                <fa-icon [icon]="faEmployees"></fa-icon> Employees
+            </button>
+            <button mat-menu-item routerLink="Departments">
+                <fa-icon [icon]="faDepartments"></fa-icon> Departments
+            </button>
+            <button mat-menu-item routerLink="Designations">
+                <fa-icon [icon]="faDesignation"></fa-icon> Designations
+            </button>
+            <button mat-menu-item routerLink="Clients">
+                <fa-icon [icon]="faClients"></fa-icon> Clients
+            </button>
+            <button mat-menu-item routerLink="Projects">
+                <fa-icon [icon]="faProjects"></fa-icon> Projects
+            </button>
+            <h3>Leave Management</h3>
+            <button mat-menu-item routerLink="Holidays">
+                <fa-icon [icon]="faHolidays"></fa-icon> Holidays
+            </button>
+            <button mat-menu-item routerLink="LeaveApplications">
+                <fa-icon [icon]="faLeaveApplication"></fa-icon> Leave Applications
+            </button>
+            <button mat-menu-item routerLink="LeaveTypes">
+                <fa-icon [icon]="faDepartment"></fa-icon> Leave Types
+            </button>
+            <h3>Reports</h3>
+            <button mat-menu-item routerLink="EmployeeReport">
+                <fa-icon [icon]="faEmployeeReport"></fa-icon> Employee Report
+            </button>
+            <button mat-menu-item routerLink="LeaveReport">
+                <fa-icon [icon]="faEmployeeReport"></fa-icon> Leave Report
+            </button>
+        </mat-nav-list>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button mat-icon-button (click)="sidenav.toggle()" class="hamburger">
+                <!-- matTooltip="Toggle Sidebar" -->
+                <mat-icon>menu</mat-icon>
+                <!-- <i class="fas fa-bars"></i> -->
+            </button>
+            <span>{{ activeComponentName || 'Sidebar Example' }}</span>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+        <!-- Your main content goes here -->
+    </mat-sidenav-content>
+</mat-sidenav-container>

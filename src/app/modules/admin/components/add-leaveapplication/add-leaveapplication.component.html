@@ -1,0 +1,46 @@
+<!-- app.component.html -->
+<form [formGroup]="leaveApplicationForm" (ngSubmit)="onSubmit()">
+
+    <!-- Leave Type-->
+    <mat-form-field>
+        <mat-label>Leave Type</mat-label>
+        <mat-select formControlName="leaveType">
+            <!-- Add your designation options here -->
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <!-- Add more options as needed -->
+        </mat-select>
+    </mat-form-field>
+
+    <!-- Start Date (Datepicker) -->
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Start Date" formControlName="startDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+
+    <!-- No.of days -->
+    <mat-form-field>
+        <input matInput placeholder="No Of Days" formControlName="noOfDays">
+    </mat-form-field>
+
+
+    <!-- End Date (Datepicker) -->
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="End Date" formControlName="endDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <!-- Description -->
+    <mat-form-field>
+        <input matInput placeholder="Description" formControlName="description">
+    </mat-form-field>
+
+
+
+    <button type="submit" mat-raised-button color="primary">Submit</button>
+    <button type="button" mat-button (click)="onReset()">Reset</button>
+    <button type="button" mat-button (click)="onBack()">Back</button>
+</form>

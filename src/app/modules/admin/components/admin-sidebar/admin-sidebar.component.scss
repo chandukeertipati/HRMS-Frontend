@@ -1,0 +1,135 @@
+.sidenav-container {
+    height: 100%;
+  }
+  
+  mat-sidenav {
+    width: 250px;
+    background-color: white; /* Set background color to white */
+    color: #333; /* Set text color to a dark color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  
+  mat-toolbar {
+    background-color: #6365A9;
+    height: 50px; /* Toolbar background color */
+    color: #333; /* Set toolbar text color to a dark color */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  
+  mat-nav-list {
+    padding-top: 20px;
+  }
+  
+  mat-icon {
+    color: #333;
+  }
+  
+  mat-nav-list button {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 5px;
+    color: #333; /* Set menu item text color to a dark color */
+    background-color: #fff; /* Set menu item background color to white */
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  
+  mat-nav-list button:hover {
+    background-color: #f0f0f0; /* Set hover background color to a light gray */
+  }
+  
+  .logo-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .logo-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+  }
+
+  .hamburger{
+    background: none;
+    border: none;
+    // top: 12px;
+    // margin-top: 10px;
+  }
+  h3{
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0px !important;
+  }
+  /* Uncomment the following lines if you want to style the logo text */
+  /*
+  .logo-text {
+    font-size: 1.5em;
+    color: #333;
+  }
+  */
+
+  .profile-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd; /* Add a border between menu and profile */
+}
+
+.avatar {
+    width: 40px; /* Set the width of the avatar */
+    height: 40px; /* Set the height of the avatar */
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%; /* Ensure the avatar image fills the container */
+    height: 100%;
+    object-fit: cover; /* Maintain the aspect ratio of the image */
+}
+
+.profile-info {
+    flex-grow: 1; /* Allow the profile info to take up remaining space */
+}
+
+.profile-info span {
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+  
+
+.settings-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.settings-dropdown {
+  position: absolute;
+  top: 50px; /* Adjust the top position as needed */
+  right: 0;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+}
+
+.settings-container button {
+  background: none;
+  border: none;
+}
+
+.settings-container button:hover {
+  cursor: pointer;
+}
+
+.settings-container:hover .settings-dropdown {
+  display: flex;
+}
+.settingIcon{
+  text-align: right;
+
+}

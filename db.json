@@ -1,0 +1,57 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "user1@gmail.com",
+      "password": "password1",
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "username": "chandu@gmail.com",
+      "password": "password2",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "username": "admin1@gmail.com",
+      "password": "adminpassword1",
+      "role": "admin"
+    },
+    {
+      "id": 4,
+      "username": "nstarx@gmail.com",
+      "password": "nstarxpassword1",
+      "role": "admin"
+    }
+  ],
+  "Departments": [
+    {
+      "id": 1,
+      "departmentName": "user1@gmail.com",
+      "description": "password1"
+    },
+    {
+      "id": "53da",
+      "departmentName": "HR Admin",
+      "description": "Human Resources"
+    },
+    {
+      "id": "0f21",
+      "departmentName": "IT Admin",
+      "description": "Information Technology"
+    },
+    {
+      "id": "ae1c",
+      "departmentName": "Maintenance",
+      "description": "maintenance"
+    }
+  ]
+}

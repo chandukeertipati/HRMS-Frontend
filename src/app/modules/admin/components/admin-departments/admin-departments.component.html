@@ -1,0 +1,38 @@
+<div class="container">
+    <button mat-fab color="primary" (click)="navigateToAddDepartment()" class="add-button">
+        <mat-icon>add</mat-icon>
+    </button>
+
+    <table mat-table [dataSource]="departments" class="mat-elevation-z8">
+        <ng-container matColumnDef="departmentName">
+            <th mat-header-cell *matHeaderCellDef> Department Name </th>
+            <td mat-cell *matCellDef="let department"> {{ department.departmentName }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef> Description </th>
+            <td mat-cell *matCellDef="let department"> {{ department.description }} </td>
+        </ng-container>
+
+        <!-- Add more columns as needed -->
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let department">
+                <!-- Add view and edit actions here -->
+                <button mat-icon-button (click)="viewDepartment(department)">
+                    <mat-icon>visibility</mat-icon>
+                </button>
+                <button mat-icon-button (click)="editDepartment(department)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button (click)="deleteDepartment(department)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['departmentName', 'description', 'actions']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['departmentName', 'description', 'actions'];"></tr>
+    </table>
+</div>

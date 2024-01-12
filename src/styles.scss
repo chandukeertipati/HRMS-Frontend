@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .container {
+    min-height: 100%;
+    position: relative;
+  }
+  
+  .add-button {
+    position: fixed;
+    bottom: 16px; /* Adjust this value to your desired distance from the bottom */
+    right: 16px; /* Adjust this value to your desired distance from the right */
+    background-color: #6365A9 !important;
+  }
+
+
+// for forms styling
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  mat-form-field {
+    width: 48%; /* Adjust the width as needed */
+    margin-bottom: 15px;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+  }
+  
+  .mat-datepicker-content {
+    font-size: 14px;
+  }
+  
+  /* Adjust styling for buttons */
+  button {
+    margin-top: 15px;
+    
+  }
+
+//   other forms styles
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+  
+  /* Optional: Style for error messages */
+  mat-error {
+    color: #d9534f; /* Bootstrap's error text color */
+    font-size: 12px;
+    margin-top: 4px;
+  }

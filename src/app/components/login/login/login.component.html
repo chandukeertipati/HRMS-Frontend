@@ -1,0 +1,30 @@
+<!-- src/app/login/login.component.html -->
+
+<div class="login-container">
+    <img src="assets\NStarx_Logo.png" alt="Logo">
+    <h2>Account Login</h2>
+    <p>Welcome back! Sign in now.</p>
+    <button mat-raised-button color="primary" (click)="toggleLoginForm()">
+        {{ showLoginForm ? 'Close Login' : 'Open Login' }}
+    </button>
+    <div *ngIf="showLoginForm">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" type="email" placeholder="Enter your email" />
+                <mat-error *ngIf="loginForm.get('email')?.hasError('required')">Email is required</mat-error>
+                <mat-error *ngIf="loginForm.get('email')?.hasError('email')">Invalid email format</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" type="password" placeholder="Enter your password" />
+                <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Password is required</mat-error>
+                <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">Password must be at least 6
+                    characters</mat-error>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">Login</button>
+        </form>
+    </div>
+</div>

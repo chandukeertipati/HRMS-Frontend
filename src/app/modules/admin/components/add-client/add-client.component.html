@@ -1,0 +1,38 @@
+<form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <input matInput placeholder="Client Name" formControlName="clientName">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Address" formControlName="address">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Website" formControlName="website">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Primary Contact Person Name" formControlName="primaryContactPersonName">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Primary Contact Person Address" formControlName="primaryContactPersonAddress">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Secondary Contact Person Name" formControlName="secondaryContactPersonName">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Secondary Contact Person Email" formControlName="secondaryContactPersonEmail">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-select placeholder="Status" formControlName="status">
+            <mat-option *ngFor="let option of statusOptions" [value]="option">{{ option }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+    <button mat-button type="button" (click)="onBack()">Back</button>
+</form>

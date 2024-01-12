@@ -1,0 +1,67 @@
+<form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <mat-label>Client Project Code</mat-label>
+        <input matInput formControlName="clientProjectCode" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Project Name</mat-label>
+        <input matInput formControlName="projectName" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Primary Contact Person Name</mat-label>
+        <input matInput formControlName="primaryContactPersonName" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Primary Contact Person Email</mat-label>
+        <input matInput formControlName="primaryContactPersonEmail" type="email" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Secondary Contact Person Name</mat-label>
+        <input matInput formControlName="secondaryContactPersonName">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Secondary Contact Person Email</mat-label>
+        <input matInput formControlName="secondaryContactPersonEmail" type="email">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Start Date</mat-label>
+        <input matInput formControlName="startDate" type="date" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>End Date</mat-label>
+        <input matInput formControlName="endDate" type="date" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Client Name</mat-label>
+        <mat-select formControlName="clientName">
+            <mat-option *ngFor="let client of clientNames" [value]="client">{{ client }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Status</mat-label>
+        <mat-select formControlName="status">
+            <mat-option value="active">Active</mat-option>
+            <mat-option value="inactive">Inactive</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div>
+        <button mat-button type="button" (click)="onBack()">Back</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="projectForm.invalid">Submit</button>
+        <button mat-button color="secondary" type="button" (click)="onReset()">Reset</button>
+    </div>
+</form>

@@ -1,0 +1,14 @@
+<form [formGroup]="designationForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <input matInput formControlName="designationName" placeholder="Designation Name" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <textarea matInput formControlName="description" placeholder="Description" required></textarea>
+    </mat-form-field>
+
+    <div>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+        <button mat-button type="button" (click)="onBack()">Back</button>
+    </div>
+</form>

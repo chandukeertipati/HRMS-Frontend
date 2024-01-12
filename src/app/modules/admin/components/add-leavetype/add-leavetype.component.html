@@ -1,0 +1,22 @@
+<!-- app.component.html -->
+<form [formGroup]="leaveTypeForm" (ngSubmit)="onSubmit()">
+
+    <!-- No.of days -->
+    <mat-form-field>
+        <input matInput placeholder="Leave Type" formControlName="leaveType">
+    </mat-form-field>
+
+    <!-- No Of Leaves Allocated -->
+    <mat-form-field>
+        <input matInput placeholder="No Of Leaves Allocated" formControlName="noOfLeaves">
+    </mat-form-field>
+
+    <!-- Credit Type -->
+    <mat-form-field>
+        <input matInput placeholder="Credit Type" formControlName="creditType">
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="primary">Submit</button>
+    <button type="button" mat-button (click)="onReset()">Reset</button>
+    <button type="button" mat-button (click)="onBack()">Back</button>
+</form>

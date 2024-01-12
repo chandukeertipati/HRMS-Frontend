@@ -1,0 +1,115 @@
+<!-- app.component.html -->
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+
+    <!-- Employee Code -->
+    <mat-form-field>
+        <input matInput placeholder="Employee Code" formControlName="employeeCode">
+    </mat-form-field>
+
+    <!-- Email -->
+    <mat-form-field>
+        <input matInput placeholder="Email" formControlName="email">
+    </mat-form-field>
+
+    <!-- First Name -->
+    <mat-form-field>
+        <input matInput placeholder="First Name" formControlName="firstName">
+    </mat-form-field>
+
+    <!-- Last Name -->
+    <mat-form-field>
+        <input matInput placeholder="Last Name" formControlName="lastName">
+    </mat-form-field>
+
+    <!-- Prior Year Experience -->
+    <mat-form-field>
+        <input matInput placeholder="Prior Year Experience" formControlName="priorYearExperience">
+    </mat-form-field>
+
+    <!-- Experience in Nstarx -->
+    <mat-form-field>
+        <input matInput placeholder="Experience in Nstarx" formControlName="experienceInNstarx">
+    </mat-form-field>
+
+    <!-- Department Name -->
+    <mat-form-field>
+        <input matInput placeholder="Department Name" formControlName="departmentName">
+    </mat-form-field>
+
+    <!-- Designation (Dropdown) -->
+    <mat-form-field>
+        <mat-label>Designation</mat-label>
+        <mat-select formControlName="designation">
+            <!-- Add your designation options here -->
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <!-- Add more options as needed -->
+        </mat-select>
+    </mat-form-field>
+
+    <!-- Joining Date (Datepicker) -->
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Joining Date" formControlName="joiningDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <!-- Employee Type (Dropdown) -->
+    <mat-form-field>
+        <mat-label>Employee Type</mat-label>
+        <mat-select formControlName="employeeType">
+            <!-- Add your employee type options here -->
+            <mat-option value="fullTime">Full Time</mat-option>
+            <mat-option value="partTime">Part Time</mat-option>
+            <!-- Add more options as needed -->
+        </mat-select>
+    </mat-form-field>
+
+    <!-- Manager (Dropdown) -->
+    <mat-form-field>
+        <mat-label>Manager</mat-label>
+        <mat-select formControlName="manager">
+            <!-- Add your manager options here -->
+            <mat-option value="manager1">Manager 1</mat-option>
+            <mat-option value="manager2">Manager 2</mat-option>
+            <!-- Add more options as needed -->
+        </mat-select>
+    </mat-form-field>
+
+    <!-- Reporting Person (Dropdown) -->
+    <mat-form-field>
+        <mat-label>Reporting Person</mat-label>
+        <mat-select formControlName="reportingPerson">
+            <!-- Add your reporting person options here -->
+            <mat-option value="person1">Person 1</mat-option>
+            <mat-option value="person2">Person 2</mat-option>
+            <!-- Add more options as needed -->
+        </mat-select>
+    </mat-form-field>
+
+    <!-- IsAdmin (Dropdown) -->
+    <mat-form-field>
+        <mat-label>Is Admin</mat-label>
+        <mat-select formControlName="isAdmin">
+            <!-- Add your isAdmin options here -->
+            <mat-option value="yes">Yes</mat-option>
+            <mat-option value="no">No</mat-option>
+            <!-- Add more options as needed -->
+        </mat-select>
+    </mat-form-field>
+
+    <!-- Status (Dropdown) -->
+    <mat-form-field>
+        <mat-label>Status</mat-label>
+        <mat-select formControlName="status">
+            <!-- Add your status options here -->
+            <mat-option value="active">Active</mat-option>
+            <mat-option value="inactive">Inactive</mat-option>
+            <!-- Add more options as needed -->
+        </mat-select>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="primary">Submit</button>
+    <button type="button" mat-button (click)="onReset()">Reset</button>
+    <button type="button" mat-button (click)="onBack()">Back</button>
+</form>
