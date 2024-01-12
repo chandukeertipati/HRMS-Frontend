@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Department } from '../../interfaces/department';
 @Injectable({
   providedIn: 'root'
@@ -49,5 +49,10 @@ export class DepartmentService {
   updateDepartment(id: number, data: Department): Observable<any> {
     const url = `${this.baseUrl}/${id}`;
     return this.http.put(url, data);
+  }
+  getDepartmentCount(): Observable<number> {
+    return this.getDepartments().pipe(
+      map((Department) => Department.length)
+    );
   }
 }

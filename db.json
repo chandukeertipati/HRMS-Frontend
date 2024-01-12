@@ -53,5 +53,55 @@
       "departmentName": "Maintenance",
       "description": "maintenance"
     }
+  ],
+  "Department": [
+    {
+      "id": "4175",
+      "departmentName": "User",
+      "description": ""
+    },
+    {
+      "id": "a8a4",
+      "departmentName": "HR Admin",
+      "description": "human resource"
+    }
+  ],
+  "leaveTypes": [
+    {
+      "id": 1,
+      "leaveType": "Annual Leave",
+      "numberOfLeavesAllocated": 15,
+      "creditType": "Fixed"
+    },
+    {
+      "id": 2,
+      "leaveType": "Sick Leave",
+      "numberOfLeavesAllocated": 10,
+      "creditType": "Accrual"
+    },
+    {
+      "id": 3,
+      "leaveType": "Maternity/Paternity Leave",
+      "numberOfLeavesAllocated": 12,
+      "creditType": "Fixed"
+    },
+    {
+      "id": 4,
+      "leaveType": "Public Holidays",
+      "numberOfLeavesAllocated": 8,
+      "creditType": "Fixed"
+    },
+    {
+      "id": 5,
+      "leaveType": "Unpaid Leave",
+      "numberOfLeavesAllocated": 0,
+      "creditType": "None"
+    },
+    {
+      "id": "68cc",
+      "leaveType": "Loss of Pay",
+      "numberOfLeavesAllocated": "80",
+      "creditType": "Yearly"
+    }
   ]
 }
