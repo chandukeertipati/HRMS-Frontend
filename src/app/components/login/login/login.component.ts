@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
           if (role === 'user') {
             this.router.navigate(['user']);
           } else if (role === 'admin') {
+            this.authService.setUserDetails(user[0]);
             this.router.navigate(['admin']);
           }
         } else {

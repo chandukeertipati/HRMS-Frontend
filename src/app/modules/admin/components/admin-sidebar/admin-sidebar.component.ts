@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { faXmark, faPeopleRoof, faSection, faUsers, faProjectDiagram, faBuilding, faFile, faCalendarDays, faPlane, faUserGraduate, faBarChart, faSignOut, faUser } from '@fortawesome/free-solid-svg-icons';
 import { filter } from 'rxjs/operators';
+import { AuthenticationService } from '../../../../services/authentication/authentication.service';
 @Component({
   selector: 'app-admin-sidebar',
   templateUrl: './admin-sidebar.component.html',
@@ -26,7 +27,7 @@ export class AdminSidebarComponent {
   profileName: string = 'DefaultAcct-01';
 
   showSettings: boolean = false;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private authService: AuthenticationService) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
@@ -55,6 +56,11 @@ export class AdminSidebarComponent {
     //     this.profileId = profile.id;
     //     this.profileName = profile.name;
     // });
+    const userDetails = this.authService.getUserDetails();
+    if (userDetails) {
+      this.profileId = userDetails.id;
+      this.profileName = userDetails.name;
+    }
   }
   toggleSettings() {
     this.showSettings = !this.showSettings;
