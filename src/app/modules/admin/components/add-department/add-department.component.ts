@@ -27,7 +27,6 @@ export class AddDepartmentComponent {
 
   onSubmit() {
     const formData: Department = this.departmentForm.value;
-
     // Call the service to add the department
     this.departmentService.addDepartment(formData).subscribe(
       (response) => {

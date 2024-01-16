@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { EmployeeService } from '../../../../services/employee/employee.service';
 @Component({
   selector: 'app-add-employee',
   templateUrl: './add-employee.component.html',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class AddEmployeeComponent {
   employeeForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) { }
+  constructor(private fb: FormBuilder, private router: Router, private employeeService: EmployeeService) { }
 
   ngOnInit() {
     this.buildForm();
@@ -24,19 +25,33 @@ export class AddEmployeeComponent {
       priorYearExperience: [''],
       experienceInNstarx: [''],
       departmentName: [''],
-      designation: [''],
+      designation: ['', Validators.required],
       joiningDate: [''],
       employeeType: [''],
       manager: [''],
       reportingPerson: [''],
       isAdmin: [''],
-      status: ['']
+      status: ['', Validators.required]
     });
   }
 
   onSubmit() {
     // Handle form submission logic here
-    console.log('Form submitted:', this.employeeForm.value);
+    // console.log('Form submitted:', this.employeeForm.value);
+    if (this.employeeForm.valid) {
+      // Call the service to add the employee
+      this.employeeService.addEmployee(this.employeeForm.value).subscribe(
+        (response) => {
+          console.log('Employee added successfully:', response);
+          // Optionally, navigate to a different page after successful submission
+          // this.router.navigate(['/Employees']);
+          this.employeeForm.reset();
+        },
+        (error) => {
+          console.error('Error adding employee:', error);
+        }
+      );
+    }
   }
 
   onReset() {

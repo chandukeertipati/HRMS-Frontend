@@ -9,28 +9,28 @@
   "users": [
     {
       "id": 1,
-      "name":"user1",
+      "name": "user1",
       "username": "user1@gmail.com",
       "password": "password1",
       "role": "user"
     },
     {
       "id": 2,
-      "name":"Chandu",
+      "name": "Chandu",
       "username": "chandu@gmail.com",
       "password": "password2",
       "role": "user"
     },
     {
       "id": 3,
-      "name":"Admin1",
+      "name": "Admin1",
       "username": "admin1@gmail.com",
       "password": "adminpassword1",
       "role": "admin"
     },
     {
       "id": 4,
-      "name":"Nstarx.Inc",
+      "name": "Nstarx.Inc",
       "username": "nstarx@gmail.com",
       "password": "nstarxpassword1",
       "role": "admin"
@@ -106,6 +106,93 @@
       "leaveType": "Loss of Pay",
       "numberOfLeavesAllocated": "80",
       "creditType": "Yearly"
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "employeeCode": "E001",
+      "email": "john.doe@example.com",
+      "firstName": "John",
+      "lastName": "Doe",
+      "priorYearExperience": 3,
+      "experienceInNstarx": 2,
+      "departmentName": "IT",
+      "designation": "option1",
+      "joiningDate": "2024-01-16",
+      "employeeType": "fullTime",
+      "manager": "manager1",
+      "reportingPerson": "person1",
+      "isAdmin": "yes",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "employeeCode": "E002",
+      "email": "jane.smith@example.com",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "priorYearExperience": 5,
+      "experienceInNstarx": 1,
+      "departmentName": "HR",
+      "designation": "option2",
+      "joiningDate": "2024-01-17",
+      "employeeType": "partTime",
+      "manager": "manager2",
+      "reportingPerson": "person2",
+      "isAdmin": "no",
+      "status": "inactive"
+    },
+    {
+      "id": 3,
+      "employeeCode": "E003",
+      "email": "michael.jones@example.com",
+      "firstName": "Michael",
+      "lastName": "Jones",
+      "priorYearExperience": 7,
+      "experienceInNstarx": 4,
+      "departmentName": "Finance",
+      "designation": "option1",
+      "joiningDate": "2024-01-18",
+      "employeeType": "fullTime",
+      "manager": "manager1",
+      "reportingPerson": "person1",
+      "isAdmin": "no",
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "employeeCode": "1234",
+      "email": "nstarx@gmail.com",
+      "firstName": "Nstarx",
+      "lastName": "Inc",
+      "priorYearExperience": "",
+      "experienceInNstarx": "",
+      "departmentName": "",
+      "designation": "option1",
+      "joiningDate": "",
+      "employeeType": "",
+      "manager": "",
+      "reportingPerson": "",
+      "isAdmin": "",
+      "status": "active"
+    },
+    {
+      "id": "5795",
+      "employeeCode": "123456",
+      "email": "chandu@gmail.com",
+      "firstName": "chandu",
+      "lastName": "varma",
+      "priorYearExperience": "",
+      "experienceInNstarx": "",
+      "departmentName": "",
+      "designation": "option2",
+      "joiningDate": "",
+      "employeeType": "",
+      "manager": "",
+      "reportingPerson": "",
+      "isAdmin": "",
+      "status": "active"
     }
   ]
 }
